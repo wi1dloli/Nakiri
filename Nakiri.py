@@ -2,7 +2,7 @@
 import os
 
 import discord
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 intents.reactions = True
 intents.members = True
 from dotenv import load_dotenv

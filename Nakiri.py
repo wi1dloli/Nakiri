@@ -20,6 +20,6 @@ async def on_ready():
 
 async def startup():
     await bot.load_extension("cogs.misc")
-    bot.run(TOKEN)
+    await bot.start(TOKEN)
 
-#asyncio.run(startup())
+asyncio.run(startup())

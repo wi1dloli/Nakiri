@@ -1,6 +1,7 @@
 # Nakiri.py
 import os
 
+import asyncio
 import discord
 intents = discord.Intents.all()
 intents.reactions = True
@@ -17,4 +18,8 @@ bot = commands.Bot(command_prefix=';;', intents=intents)
 async def on_ready():
     print(f'{bot.user} has connected to Discord!')
 
-bot.run(TOKEN)
+async def startup():
+    await bot.load_extension("cogs.misc")
+    bot.run(TOKEN)
+
+#asyncio.run(startup())

@@ -10,5 +10,8 @@ class Misc(commands.Cog):
     async def hello(self, ctx: commands.Context):
         await ctx.send("Hello World")
 
+    @commands.command()
+    async def prefix(self, ctx: commands.Context):
+        await ctx.send("My prefix is ;;")
 async def setup(bot:commands.Bot):
     await bot.add_cog(Misc(bot))
